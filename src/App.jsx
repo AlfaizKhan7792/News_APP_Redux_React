@@ -11,7 +11,7 @@ import Business from './Pages/Business'
 import Politics from './Pages/Politics'
 import State from './Pages/State'
 import International from './Pages/International'
-import PrivateRoute from './components/PrivateRoute'
+// import PrivateRoute from './components/PrivateRoute'
 
 const App = () => {
   return (
