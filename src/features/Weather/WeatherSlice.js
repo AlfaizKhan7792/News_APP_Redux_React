@@ -1,9 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { fetchWeather, fetchWeatherDays } from "./WeatherService";
-// import {fetchWeather , fetchWeatherDays} from "./WeatherService"
-
-// export const getWeather = createAsyncThunk("weather/getWeather", fetchWeather);
-// export const getWeatherDays = createAsyncThunk("weather/getWeatherDays", fetchWeatherDays);
 
 const weatherSlice = createSlice({
   name: "Weather",
