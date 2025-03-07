@@ -49,8 +49,8 @@ const RegisterPage = () => {
               Mobile Number
             </label>
             <input
-              type="number"
-              name='number'
+              type="phone"
+              name='phone'
               onChange={handleChange}
               value={formData.phone}
               className="form-control"
