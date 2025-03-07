@@ -9,6 +9,7 @@ const RegisterPage = () => {
 
     const [formData , setFormData] = useState({
         name : "",
+        phone : "",
         email : "",
         password : "",
         confirmPassword : ""
@@ -41,6 +42,20 @@ const RegisterPage = () => {
               className="form-control"
               id="name"
               placeholder="Enter your name"
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="name" className="form-label">
+              Mobile Number
+            </label>
+            <input
+              type="number"
+              name='number'
+              onChange={handleChange}
+              value={formData.phone}
+              className="form-control"
+              id="phone"
+              placeholder="Enter your Mobile Number"
             />
           </div>
           <div className="mb-3">
