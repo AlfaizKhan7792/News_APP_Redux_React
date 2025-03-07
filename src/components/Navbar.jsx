@@ -52,8 +52,8 @@ const Navbar = () => {
 
   return (
     <>
-   {
-    !user ? <></> : 
+   {/* {
+    !user ? <></> :  */}
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <Link class="navbar-brand" to="/" onClick={() => getNews("India")}>News):- _App</Link>
@@ -90,7 +90,7 @@ const Navbar = () => {
     </div>
   </nav>
    
-   }
+   {/* } */}
     </>
   )
 }
