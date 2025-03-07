@@ -1,0 +1,9 @@
+{
+    "rewrites": [
+      {
+        "source": "/api/:path*",
+        "destination": "https://auth-backend-93eo.onrender.com/api/:path*"
+      }
+    ]
+  }
+  

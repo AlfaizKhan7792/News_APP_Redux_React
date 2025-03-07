@@ -1,0 +1,19 @@
+*{
+    transition: all ease-in-out 0.5s;
+}
+
+#sliderImage{
+    object-fit: contain;
+    height: 50vh;
+}
+
+nav{
+    position: sticky !important;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.nav-link:hover{
+    border-bottom: 1px solid #000;
+}
