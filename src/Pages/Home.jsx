@@ -24,7 +24,7 @@ dispatch(Get_News(data))
         //     navigate("/login")
         // }
         getNews("Indore")
-    },[user])
+    },[])
 
   return (
     <>
