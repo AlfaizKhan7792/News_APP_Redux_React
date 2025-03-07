@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { LogOutUser } from '../features/Auth/AuthSlice'
-import { useNavigate } from 'react-router'
+// import { useNavigate } from 'react-router'
 import { Link } from 'react-router'
 import { fetchNews } from '../features/News/NewsService'
 import { toast } from 'react-toastify'
@@ -9,10 +9,10 @@ import { Get_News } from '../features/News/NewsSlice'
 
 const Navbar = () => {
 
-    const {user} = useSelector((state) => state.Auth)
+    // const {user} = useSelector((state) => state.Auth)
     const {AllNews} = useSelector((state) => state.News)
     const dispatch = useDispatch()
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     const [Topic , setTopic] = useState("")
 
@@ -40,11 +40,11 @@ const Navbar = () => {
         setTopic("")
     }
 
-    useEffect(() =>{
-        if(user){
-            navigate("/")
-        }
-    },[user])
+    // useEffect(() =>{
+    //     if(user){
+    //         navigate("/")
+    //     }
+    // },[user])
 
     if(!AllNews || AllNews.length === 0){
         getNews("India")
