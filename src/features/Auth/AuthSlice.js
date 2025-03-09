@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { Login, Register } from "./AuthService";
+import AuthenServe from "./AuthService"
 
 const ExitUser = JSON.parse(localStorage.getItem("user"))
 
@@ -66,18 +66,18 @@ builder
 export default AuthSlice.reducer
 
 // Login User
-export const LoginUser = createAsyncThunk('AUTH/LOGIN' , async (FormData) =>{
+export const LoginUser = createAsyncThunk('AUTH/LOGIN' , async (formData) =>{
     try {
-        return await Login(FormData)
+        return await AuthenServe.Login(formData)
     } catch (error) {
         console.log(error);
     }
 })
 
 // Register User
-export const RegisterUser = createAsyncThunk('AUTH/REGISTER' , async (FormData) =>{
+export const RegisterUser = createAsyncThunk('AUTH/REGISTER' , async (formData) =>{
     try {
-        return await Register(FormData)
+        return await AuthenServe.Register(formData)
     } catch (error) {
         console.log(error);
     }

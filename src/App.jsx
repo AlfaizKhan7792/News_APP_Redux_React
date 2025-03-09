@@ -11,7 +11,7 @@ import Business from './Pages/Business'
 import Politics from './Pages/Politics'
 import State from './Pages/State'
 import International from './Pages/International'
-// import PrivateRoute from './components/PrivateRoute'
+import PrivateRoute from './components/PrivateRoute'
 
 const App = () => {
   return (
@@ -19,16 +19,17 @@ const App = () => {
       <Navbar />
     <Routes>
       <Route path='*' element={<PageNotFound />} />
-      {/* <Route path='/' element={<PrivateRoute />} /> */}
-      <Route path='/' element={<Home />} />
       <Route path='/login' element={<LoginPage />} />
       <Route path='/register' element={<RegisterPage />} />
+     <Route path='/' element={<PrivateRoute />} >
+     <Route path='/' element={<Home />} />
       <Route path='/intertainment' element={<Intertainment />} />
       <Route path='/sports' element={<Sports />} />
       <Route path='/business' element={<Business />} />
       <Route path='/politics' element={<Politics />} />
       <Route path='/state' element={<State />} />
       <Route path='/international' element={<International />} />
+     </Route>
     </Routes>
     </Router>
   )

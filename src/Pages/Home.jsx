@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-// import { useNavigate } from 'react-router'
+import { useNavigate } from 'react-router'
 import NewsSlider from '../components/NewsSlider'
 import NewsCard from '../components/NewsCard'
 import { fetchNews } from '../features/News/NewsService'
@@ -11,9 +11,9 @@ import WeatherDays from '../components/WeatherDays'
 
 const Home = () => {
 
-    // const {user} = useSelector((state) => state.Auth)
+    const {user} = useSelector((state) => state.Auth)
     const {AllNews} = useSelector((state) => state.News)
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
     const dispatch = useDispatch()
 
     const getNews = async (Topic) =>{
@@ -22,9 +22,9 @@ dispatch(Get_News(data))
     }
 
     useEffect(() =>{
-        // if(!user){
-        //     navigate("/login")
-        // }
+        if(!user){
+            navigate("/login")
+        }
         getNews("Indore")
     },[])
 
